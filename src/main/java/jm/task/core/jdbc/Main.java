@@ -7,11 +7,13 @@ public class Main {
     public static void main(String[] args) {
         UserService userService = new UserServiceImpl();
         userService.createUsersTable();
-        userService.saveUser("Oscar", "Khonma", (byte) 150);
-        userService.getAllUsers().forEach(System.out::println);
-        userService.removeUserById(1);
+        userService.saveUser("Oscar", "Khonma", (byte) 60);
+        userService.saveUser("Tanya", "Tanya", (byte) 70);
+        userService.saveUser("Katya", "Guk", (byte) 50);
+        userService.saveUser("Ivan", "Ivanov", (byte) 55);
         userService.getAllUsers().forEach(System.out::println);
         userService.cleanUsersTable();
+        userService.dropUsersTable();
 
 
 
